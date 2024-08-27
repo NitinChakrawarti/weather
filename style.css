@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+    color: rgb(255, 255, 255);
+}
+
+body {
+    background-color: rgb(174, 216, 216);
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align:center;
+    margin-top: .5vmax;
+}
+
+main {
+    height: auto;
+    width: 25vmax;
+    background-image: linear-gradient(to right bottom, rgb(195, 215, 124), rgb(119, 80, 216));
+    border-radius: 2vmax;
+    border: .2vmax solid grey;
+}
+
+.search {
+    /* height: 1.8vmax; */
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
+}
+
+.search input {
+    border-radius: 2vmax;
+    width: 80%;
+    border: none;
+    height: 2.5vmax;
+    padding-left: 3vmax;
+    color: rgb(32, 38, 38);
+    font-size: 1.4vmax;
+}
+
+.search span {
+    background-color: aliceblue;
+    width: 10%;
+    border-radius: 2vmax;
+    background-image: url(search.png);
+    padding: 1.2vmax;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#results_resp {
+    display: none;
+    height: 25vmax;
+}
+
+.response {
+    height: 80%;
+    margin-top: 2vmax;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.sky {
+    height: 35%;
+}
+
+#imge {
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    padding: 0;
+
+    #icon_wea {
+        height: 100%;
+        /* display: flex; */
+    }
+}
+
+
+.temp_loca {
+    display: grid;
+    grid-column: auto;
+    /* row-gap: 1vmax; */
+    text-align: center;
+
+    /* height: 30%; */
+    div {
+        font-size: 2vmax;
+    }
+}
+
+#temprature {
+    display: inline;
+    font-size: 3vmax;
+}
+
+/* #wind{
+margin-bottom: 1.9vmax;
+} */
+
+#wind, #humidc {
+    display: inline;
+    font-size: 2vmax;
+}
+
+
+
+.wh {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30%;
+    span {
+        padding-left: .6vmax;
+    }
+}
+
+.humidity {
+    display: flex;
+    img {
+        height: 2vmax;
+        width: auto;
+        margin-top: 1vmax;
+    }
+    p {
+        font-size: 1.5vmax;
+    }
+}
+
+.wind {
+    display: flex;
+    img {
+        height: 2vmax;
+        width: auto;
+        margin-top: 1vmax;
+
+    }
+
+    p {
+        font-size: 1.5vmax;
+    }
+}
+
+.humid, .win {
+    height: 1.8vmax;
+    margin-bottom: .8vmax;
+
+    span {
+        font-size: 1.5vmax;
+    }
+}

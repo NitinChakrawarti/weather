@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="shortcut icon" href="devoic.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <h1>Weather Report</h1>
+        <div class="search">
+
+            <input type="text" name="" id="input_field" placeholder="Enter Location" value="">
+            <span onclick="searchclick()">
+            </span>
+
+        </div>
+        <div class="response" id="results_resp">
+            <div class="sky">
+                <div id="imge">
+                    <img id="icon_wea" src="" alt="">
+                </div>
+            </div>
+            <div class="temp_loca">
+                <div id="temp">
+                    <div id="temprature">
+                        0
+                    </div><span> <sup>0</sup>C</span>
+                </div>
+                <div id="loca">
+                    Bhopal
+                </div>
+
+            </div>
+            <div class="wh">
+                <div class="humidity">
+                    <img src="humidity.png" alt="">
+                    <span>
+                        <div class="humid">
+                            <div id="humidc">
+                                10</div><span>%</span>
+                        </div>
+                        <p>Humidity</p>
+                    </span>
+                </div>
+                <div class="wind">
+                    <img src="wind.png" alt="">
+                    <span>
+                        <div class="win">
+                            <div id="wind">
+                                10</div><span>Km/h</span>
+                        </div>
+                        <p>Wind Speed</p>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
