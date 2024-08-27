@@ -36,6 +36,9 @@ async function apicall(e) {
         locat.innerHTML = (json.name);
         wind.innerHTML = (json.wind.speed);
         humidc.innerHTML = (json.main.humidity);
+
+// sir this code is written for icon 
+        
         let icon =await (json.weather[0].main)
         imge.src = `${icon}.png`
         inputs.value = '';
