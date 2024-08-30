@@ -5,7 +5,6 @@ const tempe = document.getElementById('temprature');
 const wind = document.getElementById('wind');
 const humidc = document.getElementById('humidc');
 let icon_wea = document.querySelector('#icon_wea');
-let sky = document.getElementsByClassName('sky')
 let imge = document.querySelector('#imge')
 
 const myApi = "14d436cfc10fdf7c4f51d081f9a6525c"
@@ -41,9 +40,11 @@ async function apicall(e) {
         humidc.innerHTML = (json.main.humidity);
 
         // sir this code is written for icon 
-        // let icon = json.weather[0].main
-        // icon_wea.src = icon + '.png';
-        sky.innerHTML = `<img src="${(json.weather[0].main) +".png"}" alt="" class="wicon">`;
+
+        let icon = json.weather[0].main
+        icon_wea.src = `images/${icon}.png`;
+
+
         inputs.value = '';
     }
     catch (error) {
