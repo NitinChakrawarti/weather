@@ -39,8 +39,8 @@ async function apicall(e) {
 
 // sir this code is written for icon 
         
-        let icon =await (json.weather[0].main)
-        imge.src = `${icon}.png`
+        let icon =json.weather[0].main
+        imge.src = icon +'.png';
         inputs.value = '';
 
     }
