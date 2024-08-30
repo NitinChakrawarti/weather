@@ -4,7 +4,10 @@ const locat = document.getElementById('loca');
 const tempe = document.getElementById('temprature');
 const wind = document.getElementById('wind');
 const humidc = document.getElementById('humidc');
-const imge = document.querySelector('#icon_wea');
+let icon_wea = document.querySelector('#icon_wea');
+let sky = document.getElementsByClassName('sky')
+let imge = document.querySelector('#imge')
+
 const myApi = "14d436cfc10fdf7c4f51d081f9a6525c"
 const resultDisplay = document.querySelector("#results_resp")
 const url = `"https://api.openweathermap.org/data/2.5/weather?q="${''}&appid=${myApi}`
@@ -24,25 +27,24 @@ async function apicall(e) {
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            resultDisplay.style.display= "none";
+            resultDisplay.style.display = "none";
             alert("Invalid Location , Please Enter a valid Location")
             throw new Error(`Response status: ${response.status}`);
         }
-         
+
         const json = await response.json();
         // console.log(json);
-        resultDisplay.style.display= "block"
+        resultDisplay.style.display = "block"
         tempe.innerHTML = (json.main.temp - 273).toFixed(0);
         locat.innerHTML = (json.name);
         wind.innerHTML = (json.wind.speed);
         humidc.innerHTML = (json.main.humidity);
 
-// sir this code is written for icon 
-        
-        let icon =json.weather[0].main
-        imge.src = icon +'.png';
+        // sir this code is written for icon 
+        // let icon = json.weather[0].main
+        // icon_wea.src = icon + '.png';
+        sky.innerHTML = `<img src="${(json.weather[0].main) +".png"}" alt="" class="wicon">`;
         inputs.value = '';
-
     }
     catch (error) {
         console.log(error);
