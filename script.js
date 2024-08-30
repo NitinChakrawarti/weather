@@ -5,7 +5,7 @@ const tempe = document.getElementById('temprature');
 const wind = document.getElementById('wind');
 const humidc = document.getElementById('humidc');
 let icon_wea = document.querySelector('#icon_wea');
-let imge = document.querySelector('#imge')
+// let imge = document.querySelector('#imge')
 
 const myApi = "14d436cfc10fdf7c4f51d081f9a6525c"
 const resultDisplay = document.querySelector("#results_resp")
@@ -41,10 +41,29 @@ async function apicall(e) {
 
         // sir this code is written for icon 
 
-        let icon = json.weather[0].main
-        icon_wea.src = `images/${icon}.png`;
+        // let icon = json.weather[0].main
 
+        if(json.weather[0].main == 'Clouds'){
+            icon_wea.src = "clouds.png";
+        }
+        else if(json.weather[0].main == 'Clear'){
+            icon_wea.src = "clear.png";
+        }
+        else if(json.weather[0].main == 'Mist'){
+            icon_wea.src = "mist.png";
+        }
+        else if(json.weather[0].main == 'Drizzle'){
+            icon_wea.src = "drizzle.png";
+        }
+        else if(json.weather[0].main == 'Snow'){
+            icon_wea.src = "snow.png";
+        }
+        else if(json.weather[0].main == 'Rain'){
+            icon_wea.src = "rain.png";
+        }
 
+        // icon_wea.src = `images/${icon}.png`;
+        // console.log(icon);
         inputs.value = '';
     }
     catch (error) {
